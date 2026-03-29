@@ -1,0 +1,7 @@
+.env
+ApiKey.py
+__pycache__/
+.DS_Store
+faiss_index/
+.idea/
+.venv/

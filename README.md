@@ -1,53 +1,47 @@
-# 📰 News Analyser
+# News Analyser
 
-**News Analyser** is a Streamlit-based web app that allows users to input multiple news article URLs, process their content, and answer user queries based on the analyzed articles. The app utilizes **OpenAI's GPT model** via LangChain to provide answers with relevant sources.
+A Streamlit web application built as a minor project during the 3rd year of engineering. It lets users input up to 3 news article URLs, processes their content using LangChain and OpenAI, and answers questions about the articles with cited sources.
 
-## Features
+## Stack
 
-- **Analyze Multiple News URLs**: Input up to 3 URLs to extract and process information from articles.
-- **Question Answering with Sources**: Ask questions about the content of the news articles and get answers with citations.
-- **Persistent Index**: The app saves the processed data into a local FAISS index for faster responses to subsequent queries.
-- **Simple and Intuitive UI**: Built using Streamlit, the app offers a clean and user-friendly interface.
-
-## Tech Stack
-
-- **Frontend**: [Streamlit](https://streamlit.io/) (for the web interface)
-- **Backend**: [LangChain](https://langchain.com/) (for LLM-based question answering)
-- **Vector Storage**: [FAISS](https://github.com/facebookresearch/faiss) (for fast document embeddings retrieval)
-- **LLM**: [OpenAI GPT](https://openai.com/)
-- **Embeddings**: OpenAI Embeddings (for document and query vectorization)
-
-## Requirements
-
-- Python 3.8+
 - Streamlit
 - LangChain
 - FAISS
-- OpenAI API Key
+- OpenAI GPT and Embeddings
 
-## Installation
+## Setup
 
-Follow these steps to set up the project on your local machine:
-
-1. **Clone the repository**:
+1. Clone the repository and install dependencies:
 
     ```bash
     git clone https://github.com/yourusername/News_Analyser.git
-    cd news-researcher
+    cd News_Analyser
+    pip install -r Requirements.txt
     ```
 
-2. **Install the required dependencies**:
+2. Copy `.env.example` to `.env` and fill in your OpenAI API key:
 
     ```bash
-    pip install -r requirements.txt
+    cp .env.example .env
     ```
 
-3. **Add your OpenAI API key**:
+    `.env`:
+    ```
+    OPENAI_API_KEY=your-openai-api-key-here
+    ```
 
-    Create a file called `ApiKey.py` in the project root directory and add your OpenAI API key as follows:
+3. Run the app:
 
-    ```python
-    openapi_key = "your-openai-api-key-here"
+    ```bash
+    streamlit run main.py
+    ```
+
+## Usage
+
+- Paste up to 3 news article URLs in the sidebar.
+- Click "Analyze Sources" to process and index the content.
+- Type a question in the main input field to get an answer with sources.
+
     ```
 
 ## Usage
