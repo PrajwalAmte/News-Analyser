@@ -7,3 +7,5 @@ faiss-cpu>=1.7.4
 tiktoken>=0.4.0
 python-dotenv>=1.0.0
 unstructured>=0.7.8
+newspaper3k>=0.2.8
+lxml_html_clean>=0.4.4

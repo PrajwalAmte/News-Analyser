@@ -2,6 +2,10 @@
 
 A Streamlit web application built as a minor project during the 3rd year of engineering. It lets users input up to 3 news article URLs, processes their content using LangChain and OpenAI, and answers questions about the articles with cited sources.
 
+## App Screenshot
+
+![News Researcher App](image.png)
+
 ## Stack
 
 - Streamlit
